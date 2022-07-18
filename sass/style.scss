@@ -1,0 +1,89 @@
+// variables primary
+$dark-blue: hsl(240, 38%, 20%);
+$grayish-blue: hsl(240, 18%, 77%);
+
+// site
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	min-width: 320px;
+	background: url('../images/pattern-curve.svg') bottom no-repeat;
+	background-size: contain;
+}
+
+.slider {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 3rem;
+
+	&__images {
+		position: relative;
+		min-width: 25.5rem;
+		min-height: 25.5rem;
+
+		&--image1,
+		&--image2 {
+			position: absolute;
+			// display: block;
+			width: auto;
+			height: 100%;
+			border-radius: 0.5rem;
+		}
+	}
+
+	&__textbox {
+		// position: relative;
+
+		&--area1,
+		&--area2 {
+			// position: absolute;
+			// width: 100%;
+			// height: 100%;
+			// inset: 0;
+
+			.comment {
+				font-weight: 300;
+				font-size: 1.7rem;
+				line-height: 2rem;
+				margin: 1rem;
+				text-align: center;
+			}
+
+			.author,
+			.job {
+				display: inline-block;
+				width: 100%;
+				font-size: 1.5rem;
+				text-align: center;
+			}
+
+			.author {
+				font-weight: 700;
+				color: $dark-blue;
+			}
+
+			.job {
+				color: $grayish-blue;
+			}
+		}
+	}
+}

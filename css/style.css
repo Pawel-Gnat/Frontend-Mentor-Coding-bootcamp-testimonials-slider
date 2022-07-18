@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  min-width: 320px;
+  background: url("../images/pattern-curve.svg") bottom no-repeat;
+  background-size: contain;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3rem;
+}
+
+.slider__images {
+  position: relative;
+  min-width: 25.5rem;
+  min-height: 25.5rem;
+}
+
+.slider__images--image1, .slider__images--image2 {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.slider__textbox--area1 .comment, .slider__textbox--area2 .comment {
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.slider__textbox--area1 .author,
+.slider__textbox--area1 .job, .slider__textbox--area2 .author,
+.slider__textbox--area2 .job {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.slider__textbox--area1 .author, .slider__textbox--area2 .author {
+  font-weight: 700;
+  color: #202046;
+}
+
+.slider__textbox--area1 .job, .slider__textbox--area2 .job {
+  color: #babacf;
+}
+/*# sourceMappingURL=style.css.map */
