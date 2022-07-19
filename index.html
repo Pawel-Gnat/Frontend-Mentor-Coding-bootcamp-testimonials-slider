@@ -16,33 +16,32 @@
 <body>
 	<main>
 		<section>
-			<div class="slider" aria-describedby="slider">
-				<div class="slider__images">
+			<div class="slider-container" aria-describedby="slider">
+				<div class="slider">
 					<img src="./images/image-tanya.jpg"
 						alt="Tanya photo, a young woman with black curly hair with black coat and white shirt"
-						class="slider__images--image1">
+						class="slider__image1">
 					<img src="./images/image-john.jpg"
 						alt="John photo, a young dark haired man, smiling and dressed in blue t-shirt"
-						class="slider__images--image2">
+						class="slider__image2">
+					<div class="slider__buttons">
+						<button id="previous-btn"><img src="./images/icon-prev.svg" alt="" aria-hidden="true"></button>
+						<button id="next-btn"><img src="./images/icon-next.svg" alt="" aria-hidden="true"></button>
+					</div>
 				</div>
-				<div class="slider__button">
-					<button class="slider__button--previous"><img src="./images/icon-prev.svg" alt=""
-							aria-hidden="true"></button>
-					<button class="slider__button--next"><img src="./images/icon-next.svg" alt=""
-							aria-hidden="true"></button>
-				</div>
-				<div class="slider__textbox">
-					<div class="slider__textbox--area1">
-						<p class="comment">
+
+				<div class="textbox">
+					<div class="textbox__area1">
+						<p class="textbox__area1--comment">
 							" I've been interested in coding for a while but never taken the jump, until now. I couldn't
 							recommend this course enough. I'm now in the job of my dreams and so excited about the
 							future. "
 						</p>
-						<span class="author">Tanya Sinclair</span>
-						<span class="job">UX Engineer</span>
+						<span class="textbox__area1--author">Tanya Sinclair</span>
+						<span class="textbox__area1--job">UX Engineer</span>
 					</div>
-					<div class="slider__textbox--area2">
-						<p class="comment">
+					<div class="textbox__area2">
+						<p class="textbox__area2--comment">
 							" If you want to lay the best foundation possible I'd recommend taking this course. The
 							depth
 							the
@@ -50,8 +49,8 @@
 							professional
 							developer. "
 						</p>
-						<span class="author">John Tarkpor</span>
-						<span class="job">Junior Front-end Developer</span>
+						<span class="textbox__area2--author">John Tarkpor</span>
+						<span class="textbox__area2--job">Junior Front-end Developer</span>
 					</div>
 				</div>
 			</div>

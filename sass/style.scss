@@ -1,6 +1,7 @@
 // variables primary
-$dark-blue: hsl(240, 38%, 20%);
-$grayish-blue: hsl(240, 18%, 77%);
+$dark-blue: rgb(32, 32, 70);
+$grayish-blue: rgb(186, 186, 207);
+$blue: rgba(32, 32, 70, 0.5);
 
 // site
 *,
@@ -29,61 +30,170 @@ body {
 	background-size: contain;
 }
 
-.slider {
+.slider-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0 3rem;
+	margin: 3rem;
+}
 
-	&__images {
-		position: relative;
-		min-width: 25.5rem;
-		min-height: 25.5rem;
+.slider {
+	position: relative;
+	background: url('../images/pattern-bg.svg') center no-repeat;
+	background-size: contain;
+	width: 33rem;
+	height: 31.5rem;
 
-		&--image1,
-		&--image2 {
-			position: absolute;
-			// display: block;
-			width: auto;
+	&__image1,
+	&__image2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 77.5%;
+		height: auto;
+		box-shadow: 0px 45px 50px -40px $blue;
+	}
+
+	&__buttons {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		bottom: 10%;
+		right: 50%;
+		height: 4rem;
+		width: 8rem;
+		border: none;
+		background: white;
+		border-radius: 100vmax;
+		transform: translate(50%, 50%);
+		overflow: hidden;
+
+		button {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
 			height: 100%;
-			border-radius: 0.5rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.5s;
+
+			img {
+				display: block;
+				width: 1rem;
+				height: 1.5rem;
+			}
+		}
+
+		button:hover {
+			background-color: $grayish-blue;
+		}
+	}
+}
+
+.textbox {
+	position: relative;
+	min-width: 30rem;
+	height: 20rem;
+	margin-top: 3.5rem;
+	background: url('../images/pattern-quotes.svg') top no-repeat;
+	background-size: 20%;
+
+	&__area1,
+	&__area2 {
+		position: absolute;
+
+		&--comment {
+			font-weight: 300;
+			font-size: 1.7rem;
+			line-height: 2.4rem;
+			padding: 2rem 0;
+			text-align: center;
+		}
+
+		&--author,
+		&--job {
+			display: inline-block;
+			width: 100%;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+
+		&--author {
+			font-weight: 700;
+			color: $dark-blue;
+		}
+
+		&--job {
+			color: $grayish-blue;
+			padding: 0.2rem 0;
 		}
 	}
 
-	&__textbox {
-		// position: relative;
+	&__area2 {
+		display: none;
+	}
+}
 
-		&--area1,
-		&--area2 {
-			// position: absolute;
-			// width: 100%;
-			// height: 100%;
-			// inset: 0;
+@media (min-width: 1220px) {
+	body {
+		background: url('../images/pattern-curve.svg') bottom left no-repeat;
+	}
 
-			.comment {
-				font-weight: 300;
-				font-size: 1.7rem;
-				line-height: 2rem;
-				margin: 1rem;
-				text-align: center;
+	.slider-container {
+		flex-direction: row;
+		margin: 3rem;
+	}
+
+	.slider {
+		order: 2;
+		width: 70rem;
+		height: 66rem;
+
+		&__buttons {
+			bottom: 9%;
+			left: 20%;
+			transform: translateY(50%);
+		}
+	}
+
+	.textbox {
+		order: 1;
+		min-width: 64rem;
+		height: 35rem;
+		margin-top: 3.5rem;
+		padding-top: 5rem;
+		background: url('../images/pattern-quotes.svg') 20% top no-repeat;
+		background-size: 20%;
+		left: 10%;
+		z-index: 1;
+
+		&__area1,
+		&__area2 {
+			&--comment {
+				font-size: 3.2rem;
+				line-height: 4rem;
 			}
 
-			.author,
-			.job {
-				display: inline-block;
-				width: 100%;
-				font-size: 1.5rem;
-				text-align: center;
+			&--author,
+			&--job {
+				display: inline;
+				font-size: 2rem;
 			}
 
-			.author {
-				font-weight: 700;
-				color: $dark-blue;
+			&--job {
+				padding: 0;
+				margin-left: 0.5rem;
 			}
+		}
 
-			.job {
-				color: $grayish-blue;
-			}
+		&__area2 {
+			display: none;
 		}
 	}
 }
