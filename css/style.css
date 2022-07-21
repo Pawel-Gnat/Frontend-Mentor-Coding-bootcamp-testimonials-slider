@@ -68,6 +68,7 @@ body {
   height: auto;
   -webkit-box-shadow: 0px 45px 50px -40px rgba(32, 32, 70, 0.5);
           box-shadow: 0px 45px 50px -40px rgba(32, 32, 70, 0.5);
+  opacity: 0;
 }
 
 .slider__buttons {
@@ -124,18 +125,19 @@ body {
   position: relative;
   min-width: 30rem;
   height: 20rem;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   background: url("../images/pattern-quotes.svg") top no-repeat;
   background-size: 20%;
 }
 
 .textbox__area1, .textbox__area2 {
   position: absolute;
+  opacity: 0;
 }
 
 .textbox__area1--comment, .textbox__area2--comment {
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.75rem;
   line-height: 2.4rem;
   padding: 2rem 0;
   text-align: center;
@@ -156,10 +158,6 @@ body {
 .textbox__area1--job, .textbox__area2--job {
   color: #babacf;
   padding: 0.2rem 0;
-}
-
-.textbox__area2 {
-  display: none;
 }
 
 @media (min-width: 1220px) {
@@ -190,7 +188,7 @@ body {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    min-width: 64rem;
+    min-width: 64.5rem;
     height: 35rem;
     margin-top: 3.5rem;
     padding-top: 5rem;
@@ -200,19 +198,40 @@ body {
     z-index: 1;
   }
   .textbox__area1--comment, .textbox__area2--comment {
-    font-size: 3.2rem;
+    font-size: 3.25rem;
     line-height: 4rem;
+    text-align: left;
   }
   .textbox__area1--author, .textbox__area1--job, .textbox__area2--author, .textbox__area2--job {
     display: inline;
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
   .textbox__area1--job, .textbox__area2--job {
     padding: 0;
     margin-left: 0.5rem;
   }
-  .textbox__area2 {
-    display: none;
+}
+
+.fade-in {
+  -webkit-animation: fadeIn 1s forwards;
+          animation: fadeIn 1s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
