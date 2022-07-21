@@ -1,7 +1,6 @@
-# Frontend Mentor - Coding bootcamp testimonials slider
+# Frontend Mentor - Coding bootcamp testimonials slider solution
 
-![Design preview for the Coding bootcamp testimonials slider coding challenge](./design/desktop-preview.jpg)
-
+This is a solution to the [Coding bootcamp testimonials slider challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coding-bootcamp-testimonials-slider-4FNyLA8JL). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 ## Table of contents
 
 - [Overview](#overview)
